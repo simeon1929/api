@@ -8,6 +8,7 @@ async function apIget (){
     }
     var conJason = await getApi.json()
     //return conJason;
+    
     console.log(conJason);
     }
     catch(err){
@@ -15,6 +16,14 @@ async function apIget (){
         console.log('through Erro');
     }
 
+    var idMap = conJason.map(item=>{
+        //return document.write("<h3>`${item.title}`</h3>") 
+        return item.title
+    }) 
     
+    console.log(idMap);
+    //console.log(idMap);
 }
+
+
 apIget ()
